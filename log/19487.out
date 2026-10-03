@@ -1,0 +1,41 @@
+=== Host ===
+Job executed on: gpu01.slurm.cpe.kmutt.ac.th
+Job started on: Sat Oct  3 09:24:59 PM +07 2026
+=== Python ===
+Python executable location: /storage/slurm/home/69070701619@cpe.kmutt.ac.th/deep_learning/env_dl/bin/python
+Python version: Python 3.12.3
+=== GPU ===
+Sat Oct  3 21:24:59 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 580.173.02             Driver Version: 580.173.02     CUDA Version: 13.0     |
++-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA GeForce RTX 4090        Off |   00000000:00:10.0 Off |                  Off |
+|  0%   39C    P8             10W /  450W |      15MiB /  24564MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|    0   N/A  N/A            1771      G   /usr/lib/xorg/Xorg                        4MiB |
++-----------------------------------------------------------------------------------------+
+=== Execution ===
+CUDA available: True
+saved runs/curves.png
+
+| model | seeds | best test acc (mean ± std) | final test acc | epochs to 90% of best | mean batch-loss std |
+|---|---|---|---|---|---|
+| vanilla | 1 | 0.7020 ± 0.0000 | 0.6992 | 15.0 | 0.1174 |
+| improved | 1 | 0.8513 ± 0.0000 | 0.8506 | 18.0 | 0.1120 |
+
+| model | clean | gauss_noise | brightness_contrast | rotation_15 | blur |
+|---|---|---|---|---|---|
+| vanilla | 0.702 | 0.088 (-0.614) | 0.356 (-0.346) | 0.639 (-0.063) | 0.372 (-0.330) |
+| improved | 0.851 | 0.145 (-0.706) | 0.417 (-0.435) | 0.690 (-0.161) | 0.293 (-0.558) |
+Job finished on: Sat Oct  3 09:25:17 PM +07 2026

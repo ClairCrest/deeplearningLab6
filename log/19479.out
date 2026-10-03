@@ -1,0 +1,73 @@
+=== Host ===
+Job executed on: gpu01.slurm.cpe.kmutt.ac.th
+Job started on: Sat Oct  3 09:09:52 PM +07 2026
+=== Python ===
+Python executable location: /storage/slurm/home/69070701619@cpe.kmutt.ac.th/deep_learning/env_dl/bin/python
+Python version: Python 3.12.3
+=== GPU ===
+Sat Oct  3 21:09:52 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 580.173.02             Driver Version: 580.173.02     CUDA Version: 13.0     |
++-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA GeForce RTX 4090        Off |   00000000:00:10.0 Off |                  Off |
+| 30%   45C    P2             59W /  450W |      15MiB /  24564MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|    0   N/A  N/A            1771      G   /usr/lib/xorg/Xorg                        4MiB |
++-----------------------------------------------------------------------------------------+
+=== Execution ===
+CUDA available: True
+device=cuda model=improved params=2,390,825 train=3326 test=1426
+ep   1 | train loss 1.5828 (std 0.397) acc 0.447 | test loss 1.4743 acc 0.485 | 4s
+ep   2 | train loss 1.2865 (std 0.156) acc 0.549 | test loss 1.2783 acc 0.548 | 3s
+ep   3 | train loss 1.1969 (std 0.146) acc 0.564 | test loss 1.2147 acc 0.570 | 3s
+ep   4 | train loss 1.0904 (std 0.114) acc 0.611 | test loss 1.0758 acc 0.602 | 3s
+ep   5 | train loss 1.0304 (std 0.133) acc 0.626 | test loss 1.0979 acc 0.617 | 3s
+ep   6 | train loss 0.9829 (std 0.127) acc 0.645 | test loss 1.3078 acc 0.558 | 3s
+ep   7 | train loss 0.9108 (std 0.155) acc 0.672 | test loss 0.9014 acc 0.651 | 3s
+ep   8 | train loss 0.8463 (std 0.111) acc 0.682 | test loss 1.3134 acc 0.581 | 3s
+ep   9 | train loss 0.7992 (std 0.109) acc 0.716 | test loss 0.8906 acc 0.683 | 3s
+ep  10 | train loss 0.7579 (std 0.123) acc 0.721 | test loss 0.8995 acc 0.669 | 3s
+ep  11 | train loss 0.7275 (std 0.120) acc 0.736 | test loss 0.8896 acc 0.695 | 3s
+ep  12 | train loss 0.6975 (std 0.114) acc 0.741 | test loss 0.8840 acc 0.697 | 3s
+ep  13 | train loss 0.6344 (std 0.107) acc 0.771 | test loss 0.7062 acc 0.748 | 3s
+ep  14 | train loss 0.6227 (std 0.110) acc 0.782 | test loss 0.9134 acc 0.673 | 3s
+ep  15 | train loss 0.5931 (std 0.116) acc 0.791 | test loss 0.7826 acc 0.700 | 3s
+ep  16 | train loss 0.5512 (std 0.116) acc 0.807 | test loss 0.6657 acc 0.759 | 3s
+ep  17 | train loss 0.5148 (std 0.107) acc 0.823 | test loss 0.9140 acc 0.670 | 3s
+ep  18 | train loss 0.4860 (std 0.111) acc 0.834 | test loss 0.6325 acc 0.789 | 3s
+ep  19 | train loss 0.4617 (std 0.080) acc 0.835 | test loss 0.6335 acc 0.771 | 3s
+ep  20 | train loss 0.4131 (std 0.073) acc 0.859 | test loss 0.5589 acc 0.806 | 3s
+ep  21 | train loss 0.3811 (std 0.104) acc 0.867 | test loss 0.5530 acc 0.804 | 3s
+ep  22 | train loss 0.3616 (std 0.069) acc 0.877 | test loss 0.4985 acc 0.832 | 3s
+ep  23 | train loss 0.3322 (std 0.084) acc 0.891 | test loss 0.4977 acc 0.827 | 3s
+ep  24 | train loss 0.3178 (std 0.081) acc 0.895 | test loss 0.4552 acc 0.842 | 3s
+ep  25 | train loss 0.3072 (std 0.085) acc 0.901 | test loss 0.4508 acc 0.844 | 3s
+ep  26 | train loss 0.2887 (std 0.064) acc 0.906 | test loss 0.4422 acc 0.849 | 3s
+ep  27 | train loss 0.2608 (std 0.063) acc 0.922 | test loss 0.4296 acc 0.849 | 3s
+ep  28 | train loss 0.2625 (std 0.075) acc 0.918 | test loss 0.4302 acc 0.851 | 3s
+ep  29 | train loss 0.2525 (std 0.055) acc 0.924 | test loss 0.4278 acc 0.849 | 3s
+ep  30 | train loss 0.2436 (std 0.056) acc 0.927 | test loss 0.4295 acc 0.851 | 3s
+
+Best test acc: 0.8513
+Per-class accuracy:
+  Cardboard              0.810  (n=126)
+  Food Organics          0.972  (n=106)
+  Glass                  0.896  (n=134)
+  Metal                  0.874  (n=246)
+  Miscellaneous Trash    0.680  (n=153)
+  Paper                  0.919  (n=148)
+  Plastic                0.818  (n=292)
+  Textile Trash          0.818  (n=99)
+  Vegetation             0.934  (n=122)
+Job finished on: Sat Oct  3 09:11:16 PM +07 2026
